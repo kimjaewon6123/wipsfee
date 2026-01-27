@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WIPS 연차료 관리 - 국가관리</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <!-- 상단 헤더 -->
+      <header class="top-header">
+        <div class="header-left">
+          <button class="menu-toggle" aria-label="메뉴">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <div class="logo">
+            <img class="logo-image" src="LOGO.png" alt="WIPS" />
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="user-info">
+            <div class="user-avatar" aria-label="사용자">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="8" r="4"></circle>
+                <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+              </svg>
+            </div>
+            <div class="user-details">
+              <span class="user-name">김재원</span>
+              <span class="user-company">현대자동차주식회사</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="layout-container">
+        <!-- 왼쪽 사이드바 -->
+        <aside class="sidebar">
+          <div class="sidebar-header">
+            <div class="logo">
+              <img class="logo-image" src="LOGO.png" alt="WIPS" />
+            </div>
+            <div class="user-info">
+              <div class="user-avatar" aria-label="사용자">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="8" r="4"></circle>
+                  <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+                </svg>
+              </div>
+              <div class="user-details">
+                <span class="user-name">김재원</span>
+                <span class="user-company">현대자동차주식회사</span>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-search">
+            <svg class="sidebar-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <a href="index.html" class="sidebar-search-text" style="text-decoration: none; color: inherit;">홈</a>
+          </div>
+          <nav class="sidebar-nav">
+            <a href="search.html" class="sidebar-nav-item">
+              <div class="sidebar-nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                </svg>
+              </div>
+              <span>검색/통계</span>
+            </a>
+            <a href="billing.html" class="sidebar-nav-item">
+              <div class="sidebar-nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <span>납부/청구</span>
+            </a>
+            <a href="nation.html" class="sidebar-nav-item" style="background: var(--color-primary-light); color: var(--color-primary);">
+              <div class="sidebar-nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <span>국가관리</span>
+            </a>
+          </nav>
+        </aside>
+
+        <!-- 메인 콘텐츠 영역 -->
+        <main class="main-content">
+        <section class="bi-flat" style="width: 100%; max-width: 1400px;">
+          <div class="page-header">
+            <div>
+              <h2 class="page-title">국가관리</h2>
+              <p class="page-description">국가별 특허청 정보, 연차료 관련 법규, 관납료 정보를 확인하세요.</p>
+            </div>
+          </div>
+
+          <div class="tabs bi-tabs">
+            <button class="tab active" data-tab="office">특허청</button>
+            <button class="tab" data-tab="law">법규</button>
+            <button class="tab" data-tab="fee">관납료</button>
+          </div>
+
+          <div class="tab-content active" id="tab-office">
+            <div class="section-title">특허청</div>
+            <div class="data-table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>국가코드</th>
+                    <th>국가명</th>
+                    <th>구분</th>
+                    <th>비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>AE</td>
+                    <td>아랍에미리트연합 (UNITED ARAB EMIRATES)</td>
+                    <td>검색</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>AP</td>
+                    <td>아프리카지역지적재산권기구 (ARIPO)</td>
+                    <td>디자인검색</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>AR</td>
+                    <td>아르헨티나 (ARGENTINA)</td>
+                    <td>특허청</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-law">
+            <div class="panel-toolbar">
+              <div class="section-title">연차료 관련 법규</div>
+              <div class="table-actions">
+                <input type="text" placeholder="국가코드, 국가명 검색" />
+                <button class="btn-primary">검색</button>
+              </div>
+            </div>
+            <div class="data-table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>국가코드</th>
+                    <th>국가명</th>
+                    <th>제목</th>
+                    <th>작성일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>EM</td>
+                    <td>EM</td>
+                    <td>국가등록 테스트</td>
+                    <td>2025-08-06</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>AU</td>
+                    <td>호주</td>
+                    <td>호주 등록</td>
+                    <td>2025-08-05</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-fee">
+            <div class="panel-toolbar">
+              <div class="section-title">관납료 정보</div>
+              <div class="table-actions">
+                <input type="text" placeholder="국가코드, 국가명 검색" />
+                <button class="btn-primary">검색</button>
+              </div>
+            </div>
+            <div class="data-table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>No.</th>
+                    <th>국가코드</th>
+                    <th>국가명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>+</td>
+                    <td>1</td>
+                    <td>AP</td>
+                    <td>아프리카 지역 공업 소유권 기구</td>
+                  </tr>
+                  <tr>
+                    <td>+</td>
+                    <td>2</td>
+                    <td>AU</td>
+                    <td>호주 (AUSTRALIA)</td>
+                  </tr>
+                  <tr>
+                    <td>+</td>
+                    <td>3</td>
+                    <td>CA</td>
+                    <td>캐나다 (CANADA)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="nation-page.js"></script>
+  </body>
+</html>

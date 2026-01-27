@@ -1,0 +1,22 @@
+{
+  "name": "wips-annuity-service",
+  "version": "1.0.0",
+  "description": "WIPS 연차료 관리 고객 페이지",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite preview --port 5173"
+  },
+  "keywords": [
+    "wips",
+    "annuity",
+    "patent"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

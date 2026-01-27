@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WIPS 연차료 관리</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <!-- 상단 헤더 -->
+      <header class="top-header">
+        <div class="header-left">
+          <button class="menu-toggle" aria-label="메뉴">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <div class="logo">
+            <img class="logo-image" src="LOGO.png" alt="WIPS" />
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="user-info">
+            <div class="user-avatar" aria-label="사용자">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="8" r="4"></circle>
+                <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+              </svg>
+            </div>
+            <div class="user-details">
+              <span class="user-name">김재원</span>
+              <span class="user-company">현대자동차주식회사</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="layout-container">
+        <!-- 왼쪽 사이드바 -->
+        <aside class="sidebar">
+          <div class="sidebar-header">
+            <div class="logo">
+              <img class="logo-image" src="LOGO.png" alt="WIPS" />
+            </div>
+            <div class="user-info">
+              <div class="user-avatar" aria-label="사용자">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="8" r="4"></circle>
+                  <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
+                </svg>
+              </div>
+              <div class="user-details">
+                <span class="user-name">김재원</span>
+                <span class="user-company">현대자동차주식회사</span>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-search" style="background: var(--color-primary-light); color: var(--color-primary);">
+            <svg class="sidebar-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span class="sidebar-search-text">홈</span>
+          </div>
+          <nav class="sidebar-nav">
+            <a href="search.html" class="sidebar-nav-item">
+              <div class="sidebar-nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                </svg>
+              </div>
+              <span>검색/통계</span>
+            </a>
+            <a href="billing.html" class="sidebar-nav-item">
+              <div class="sidebar-nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <span>납부/청구</span>
+            </a>
+            <a href="nation.html" class="sidebar-nav-item">
+              <div class="sidebar-nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <span>국가관리</span>
+            </a>
+          </nav>
+        </aside>
+
+        <!-- 메인 콘텐츠 영역 -->
+        <main class="main-content">
+          <div class="home-hero">
+            <div class="home-badge">WIPS 연차료 관리 시스템</div>
+            <h1 class="home-title">연차료 관리가 한눈에 보이는 통합 대시보드</h1>
+          </div>
+
+          <!-- 메인 검색 입력 -->
+          <div class="home-search-container">
+            <div class="search-box-large">
+              <div class="search-input-top">
+                <input
+                  type="text"
+                  id="home-search"
+                  class="search-input-large"
+                  placeholder="연차료 건을 검색하세요 (예: 2026년 1월 발송건, 일본 건, 납부 임박)"
+                  autocomplete="off"
+                />
+                <button class="search-submit-btn" id="home-search-btn" aria-label="검색">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            
+            <!-- 검색 히스토리 (제미나이 스타일) -->
+            <div class="search-history-panel is-hidden" data-search-history>
+              <div class="history-header">
+                <span>최근 검색</span>
+                <button class="history-clear-btn" data-clear-history aria-label="히스토리 지우기">전체 삭제</button>
+              </div>
+              <div class="history-list" data-history-list></div>
+            </div>
+          </div>
+
+          <!-- 빠른 액세스 칩 -->
+          <div class="chip-row home-chip-row">
+            <button class="chip" data-chip="일본 건">
+              <span class="chip-text">일본 연차료 건</span>
+            </button>
+            <button class="chip" data-chip="납부 임박">
+              <span class="chip-text">납부 기한 임박</span>
+            </button>
+            <button class="chip" data-chip="2026년 1월 발송건">
+              <span class="chip-text">2026년 1월 발송건</span>
+            </button>
+            <button class="chip" data-chip="KR 특허 유지">
+              <span class="chip-text">한국 특허 유지</span>
+            </button>
+          </div>
+
+          <!-- 검색 결과 패널 (Sparkpage 스타일) -->
+          <div class="search-result-panel is-hidden">
+            <div class="result-header">
+              <div class="result-header-left">
+                <span class="result-query" data-ai-query></span>
+                <span class="ai-badge" title="AI 기반 검색 결과">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                  </svg>
+                  AI 검색
+                </span>
+              </div>
+              <button class="result-close-btn" aria-label="결과 닫기" data-result-close>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+            
+            <div class="result-content">
+              <div class="result-summary-section">
+                <p class="result-summary" data-ai-summary>
+                  연차료 관련 검색어를 입력하거나 아래 빠른 검색을 이용해 보세요.
+                </p>
+              </div>
+              
+              <!-- 동적 생성된 인사이트 카드 -->
+              <div class="result-insights" data-result-insights></div>
+              
+              <!-- 검색 결과 미리보기 -->
+              <div class="result-preview" data-result-preview></div>
+              
+              <div class="result-actions">
+                <a class="btn-secondary" data-result-search href="search.html">상세 검색</a>
+                <a class="btn-primary" data-result-billing href="billing.html">납부/청구</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 추천 섹션 -->
+          <div class="home-divider">
+            <span>추천</span>
+          </div>
+
+          <div class="home-recommendations">
+            <a class="recommend-card recommend-card-link" href="billing.html">
+              <div class="recommend-title">납부 기한 임박 건</div>
+              <p>마감이 임박한 연차료 납부 건을 빠르게 확인하세요.</p>
+            </a>
+            <a class="recommend-card recommend-card-link" href="search.html">
+              <div class="recommend-title">국가별 건·비용</div>
+              <p>어느 국가에 건이 많은지, 비용은 어떤지 요약해서 보세요.</p>
+            </a>
+            <a class="recommend-card recommend-card-link" href="billing.html?tab=claim">
+              <div class="recommend-title">청구 후 입금 대기</div>
+              <p>청구 완료 후 입금 확인이 필요한 건을 별도로 관리하세요.</p>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
