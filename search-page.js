@@ -209,6 +209,13 @@ function setupLogoClick() {
     logo.addEventListener("click", () => {
       window.location.href = "index.html";
     });
+    logo.setAttribute("tabindex", "0");
+    logo.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        window.location.href = "index.html";
+      }
+    });
   });
 }
 

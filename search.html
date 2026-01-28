@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WIPS 연차료 관리 - 검색/통계</title>
+    <title>연차료관리시스템 - 검색/통계</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +25,7 @@
             </svg>
           </button>
           <div class="logo">
-            <img class="logo-image" src="LOGO.png" alt="WIPS" />
+            <span class="logo-image logo-text" role="link" aria-label="홈으로 이동">연차료관리시스템</span>
           </div>
         </div>
         <div class="header-right">
@@ -37,8 +37,8 @@
               </svg>
             </div>
             <div class="user-details">
-              <span class="user-name">김재원</span>
-              <span class="user-company">현대자동차주식회사</span>
+              <span class="user-name">테스트 사용자</span>
+              <span class="user-company">공개 데모</span>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@
         <aside class="sidebar">
           <div class="sidebar-header">
             <div class="logo">
-              <img class="logo-image" src="LOGO.png" alt="WIPS" />
+              <span class="logo-image logo-text" role="link" aria-label="홈으로 이동">연차료관리시스템</span>
             </div>
             <div class="user-info">
               <div class="user-avatar" aria-label="사용자">
@@ -59,8 +59,8 @@
                 </svg>
               </div>
               <div class="user-details">
-                <span class="user-name">김재원</span>
-                <span class="user-company">현대자동차주식회사</span>
+                <span class="user-name">테스트 사용자</span>
+                <span class="user-company">공개 데모</span>
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@
             <a href="index.html" class="sidebar-search-text" style="text-decoration: none; color: inherit;">홈</a>
           </div>
           <nav class="sidebar-nav">
-            <a href="search.html" class="sidebar-nav-item" style="background: var(--color-primary-light); color: var(--color-primary);">
+            <a href="search.html" class="sidebar-nav-item" style="background: var(--color-primary-light); color: var(--color-primary);" aria-current="page">
               <div class="sidebar-nav-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -224,11 +224,11 @@
                     <span class="filter-label">출원대리인</span>
                     <select data-filter="receipt-출원대리인">
                       <option value="">전체</option>
-                      <option value="특허법인나나">특허법인나나</option>
-                      <option value="유미특허법인">유미특허법인</option>
-                      <option value="특허법인대상">특허법인대상</option>
-                      <option value="LG화학">LG화학</option>
-                      <option value="테스트TDK">테스트TDK</option>
+                      <option value="대리인A">대리인A</option>
+                      <option value="대리인B">대리인B</option>
+                      <option value="대리인C">대리인C</option>
+                      <option value="대리인D">대리인D</option>
+                      <option value="대리인E">대리인E</option>
                     </select>
                   </div>
                   <div class="filter-group">
@@ -610,6 +610,9 @@
             </div>
           </div>
         </section>
+        <div class="site-disclaimer">
+          본프로젝트는 AI 기술 학습으로 제작된 토이프로젝트입니다. 실제 서비스와 무관하며, 사용된 모든 데이터는 가상의 테스트 정보입니다.
+        </div>
         </main>
       </div>
     </div>

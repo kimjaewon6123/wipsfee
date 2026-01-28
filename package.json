@@ -1,7 +1,7 @@
 {
-  "name": "wips-annuity-service",
+  "name": "annuity-service",
   "version": "1.0.0",
-  "description": "WIPS 연차료 관리 고객 페이지",
+  "description": "연차료 관리 고객 페이지",
   "main": "index.html",
   "scripts": {
     "dev": "vite",

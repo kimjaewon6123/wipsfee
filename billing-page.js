@@ -336,7 +336,7 @@ function renderBillingTables() {
     const pageList = list.slice((p - 1) * PAGE_SIZE, p * PAGE_SIZE);
     const n = 16;
     rcptDetail.innerHTML = pageList.length
-      ? pageList.map((c, i) => `<tr>${fillRow(n, [(p - 1) * PAGE_SIZE + i + 1, "현대자동차주식회사", c.고객관리번호, c.PCT출원번호 || "-", c.국가, c.권리구분, c.출원번호, c.출원일자, c.등록번호, c.등록일자, c.권리만료일자, c.청구항수, c.디자인번호 ?? "", c.차기납부기한, c.고객관리번호, c.건상태])}</tr>`).join("")
+      ? pageList.map((c, i) => `<tr>${fillRow(n, [(p - 1) * PAGE_SIZE + i + 1, "테스트고객사", c.고객관리번호, c.PCT출원번호 || "-", c.국가, c.권리구분, c.출원번호, c.출원일자, c.등록번호, c.등록일자, c.권리만료일자, c.청구항수, c.디자인번호 ?? "", c.차기납부기한, c.고객관리번호, c.건상태])}</tr>`).join("")
       : '<tr><td colspan="16" class="empty-state">상세 내역이 없습니다.</td></tr>';
     updatePaginationUI("billing-receipt-detail", list.length, p);
   }
@@ -645,6 +645,13 @@ function setupLogoClick() {
     logo.style.cursor = "pointer";
     logo.addEventListener("click", () => {
       window.location.href = "index.html";
+    });
+    logo.setAttribute("tabindex", "0");
+    logo.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        window.location.href = "index.html";
+      }
     });
   });
 }
